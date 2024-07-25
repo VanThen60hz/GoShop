@@ -1,0 +1,20 @@
+server:
+    port: 8888
+
+mysql:
+    host: 127.0.0.1
+    port: 3306
+    username: root
+    password: root1234
+    dbName: GoShop
+    maxIdleConns: 10
+    maxOpenConns: 100
+    connMaxLifeTime: 3600 # in seconds
+
+logger:
+    log_level: debug
+    file_log_name: "./storages/logs/dev.001.log"
+    max_size: 500 # in megabytes
+    max_backups: 3
+    max_age: 28 # in days
+    compress: true

@@ -1,0 +1,4 @@
+{"level":"INFO",
+"time":"2024-07-21T22:19:07.733+0700",
+"caller":"initialize/run.go:16",
+"msg":"Config log ok!","ok":"success"}
