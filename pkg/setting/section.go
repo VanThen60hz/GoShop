@@ -13,7 +13,7 @@ type MySqlSetting struct {
 	DBName          string `mapstructure:"dbName"`
 	MaxIdleConns    int    `mapstructure:"maxIdleConns"`
 	MaxOpenConns    int    `mapstructure:"maxOpenConns"`
-	ConnMaxLifeTime int    `mapstructure:"connMaxLifeTime"`
+	ConnMaxLifetime int    `mapstructure:"connMaxLifetime"`
 }
 
 type LoggerSetting struct {

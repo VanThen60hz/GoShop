@@ -2,3 +2,23 @@
 "time":"2024-07-21T22:19:07.733+0700",
 "caller":"initialize/run.go:16",
 "msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-09-04T20:51:50.431+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-09-04T20:57:37.386+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-09-04T20:57:44.630+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-09-04T20:58:57.130+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-10-20T02:32:32.016+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"ERROR","time":"2024-10-20T02:32:32.056+0700","caller":"initialize/mysql.go:16","msg":"InitMysql initialize error","error":"Error 1049 (42000): Unknown database 'goshop'","stacktrace":"github.com/VanThen60hz/GoShop/internal/initialize.checkErrorPanic\n\tE:/go/GoShop/internal/initialize/mysql.go:16\ngithub.com/VanThen60hz/GoShop/internal/initialize.InitMysql\n\tE:/go/GoShop/internal/initialize/mysql.go:28\ngithub.com/VanThen60hz/GoShop/internal/initialize.Run\n\tE:/go/GoShop/internal/initialize/run.go:17\nmain.main\n\tE:/go/GoShop/cmd/server/main.go:6\nruntime.main\n\tC:/Program Files/Go/src/runtime/proc.go:271"}
+{"level":"INFO","time":"2024-10-20T02:33:25.847+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-10-20T02:33:25.851+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-10-20T02:34:59.105+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-10-20T02:34:59.109+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-10-20T02:37:11.620+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-10-20T02:37:11.624+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-10-20T02:37:47.003+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-10-20T02:37:47.007+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-10-20T02:40:05.226+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-10-20T02:40:05.230+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-10-20T02:40:35.910+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-10-20T02:40:35.915+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-10-20T02:41:28.178+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-10-20T02:41:28.182+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}

@@ -5,11 +5,11 @@ mysql:
     host: 127.0.0.1
     port: 3306
     username: root
-    password: root1234
+    password: 123456
     dbName: GoShop
     maxIdleConns: 10
     maxOpenConns: 100
-    connMaxLifeTime: 3600 # in seconds
+    connMaxLifetime: 3600 # in seconds
 
 logger:
     log_level: debug
