@@ -22,3 +22,12 @@
 {"level":"INFO","time":"2024-10-20T02:40:35.915+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
 {"level":"INFO","time":"2024-10-20T02:41:28.178+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
 {"level":"INFO","time":"2024-10-20T02:41:28.182+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-10-22T00:29:23.614+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-10-22T00:29:23.635+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
+{"level":"ERROR","time":"2024-10-22T00:29:23.932+0700","caller":"initialize/redis.go:26","msg":"initialize Redis error: %v","error":"dial tcp 127.0.0.1:6381: connectex: No connection could be made because the target machine actively refused it.","stacktrace":"github.com/VanThen60hz/GoShop/internal/initialize.InitRedis\n\tE:/go/GoShop/internal/initialize/redis.go:26\ngithub.com/VanThen60hz/GoShop/internal/initialize.Run\n\tE:/go/GoShop/internal/initialize/run.go:18\nmain.main\n\tE:/go/GoShop/cmd/server/main.go:6\nruntime.main\n\tC:/Program Files/Go/src/runtime/proc.go:271"}
+{"level":"INFO","time":"2024-10-22T00:33:03.702+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-10-22T00:33:03.706+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
+{"level":"ERROR","time":"2024-10-22T00:33:03.878+0700","caller":"initialize/redis.go:26","msg":"initialize Redis error: %v","error":"dial tcp 127.0.0.1:6381: connectex: No connection could be made because the target machine actively refused it.","stacktrace":"github.com/VanThen60hz/GoShop/internal/initialize.InitRedis\n\tE:/go/GoShop/internal/initialize/redis.go:26\ngithub.com/VanThen60hz/GoShop/internal/initialize.Run\n\tE:/go/GoShop/internal/initialize/run.go:18\nmain.main\n\tE:/go/GoShop/cmd/server/main.go:6\nruntime.main\n\tC:/Program Files/Go/src/runtime/proc.go:271"}
+{"level":"INFO","time":"2024-10-22T00:34:29.104+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-10-22T00:34:29.107+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-10-22T00:34:29.180+0700","caller":"initialize/redis.go:47","msg":"value of score is: ","score":"100"}
