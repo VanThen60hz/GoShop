@@ -1,59 +1,43 @@
 package initialize
 
 import (
-	"fmt"
-
-	c "github.com/VanThen60hz/GoShop/internal/controller"
-	"github.com/VanThen60hz/GoShop/internal/middlewares"
+	"github.com/VanThen60hz/GoShop/global"
+	"github.com/VanThen60hz/GoShop/internal/routers"
 	"github.com/gin-gonic/gin"
 )
 
-func AA() gin.HandlerFunc {
-	return func(ctx *gin.Context) {
-		fmt.Println("Before --> AA")
-		ctx.Next()
-		fmt.Println("After --> AA")
-	}
-}
-
-func BB() gin.HandlerFunc {
-	return func(ctx *gin.Context) {
-		fmt.Println("Before --> BB")
-		ctx.Next()
-		fmt.Println("After --> BB")
-	}
-}
-
-func CC(ctx *gin.Context) {
-	fmt.Println("Before --> CC")
-	ctx.Next()
-	fmt.Println("After --> CC")
-}
-
 func InitRouter() *gin.Engine {
-	r := gin.Default()
-	r.Use(middlewares.AuthenMiddleware(), BB(), CC)
+	var r *gin.Engine
 
-	v1 := r.Group("v1/2024")
-	{
-		v1.GET("/ping", c.NewPongController().Pong)
-		v1.GET("/user/1", c.NewUserController().GetUserByID)
-		// v1.PUT("/ping", Pong)
-		// v1.PATCH("/ping", Pong)
-		// v1.DELETE("/ping", Pong)
-		// v1.HEAD("/ping", Pong)
-		// v1.OPTIONS("/ping", Pong)
+	if global.Config.Server.Mode == "dev" {
+		gin.SetMode(gin.DebugMode)
+		gin.ForceConsoleColor()
+		r = gin.Default()
+	} else {
+		gin.SetMode(gin.ReleaseMode)
+		r = gin.New()
 	}
 
-	// v2 := r.Group("v2/2024")
-	// {
-	// 	v2.GET("/ping", Pong)
-	// 	v2.PUT("/ping", Pong)
-	// 	v2.PATCH("/ping", Pong)
-	// 	v2.DELETE("/ping", Pong)
-	// 	v2.HEAD("/ping", Pong)
-	// 	v2.OPTIONS("/ping", Pong)
-	// }
+	// middlewares
+	r.Use() // logging
+	r.Use() // cors
+	r.Use() // limiter global
+
+	manageRouter := routers.RouterGroupApp.Manage
+	userRouter := routers.RouterGroupApp.User
+
+	MainGroup := r.Group("/v1/2024")
+	{
+		MainGroup.GET("/checkStatus")
+	}
+	{
+		userRouter.InitUserRouter(MainGroup)
+		userRouter.InitProductRouter(MainGroup)
+	}
+	{
+		manageRouter.InitAdminRouter(MainGroup)
+		manageRouter.InitUserRouter(MainGroup)
+	}
 
 	return r
 }
