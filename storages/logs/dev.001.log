@@ -43,3 +43,34 @@
 {"level":"INFO","time":"2024-10-23T01:36:49.165+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
 {"level":"INFO","time":"2024-10-23T01:36:49.168+0700","caller":"initialize/mysql.go:29","msg":"initialize MySQL successfully"}
 {"level":"ERROR","time":"2024-10-23T01:36:49.331+0700","caller":"initialize/redis.go:26","msg":"initialize Redis error: %v","error":"dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.","stacktrace":"github.com/VanThen60hz/GoShop/internal/initialize.InitRedis\n\tE:/go/GoShop/internal/initialize/redis.go:26\ngithub.com/VanThen60hz/GoShop/internal/initialize.Run\n\tE:/go/GoShop/internal/initialize/run.go:18\nmain.main\n\tE:/go/GoShop/cmd/server/main.go:6\nruntime.main\n\tC:/Program Files/Go/src/runtime/proc.go:271"}
+{"level":"INFO","time":"2024-11-08T06:04:51.308+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-11-08T06:04:51.313+0700","caller":"initialize/mysql.go:30","msg":"initialize MySQL successfully"}
+{"level":"ERROR","time":"2024-11-08T06:04:51.505+0700","caller":"initialize/redis.go:26","msg":"initialize Redis error: %v","error":"dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.","stacktrace":"github.com/VanThen60hz/GoShop/internal/initialize.InitRedis\n\tE:/go/GoShop/internal/initialize/redis.go:26\ngithub.com/VanThen60hz/GoShop/internal/initialize.Run\n\tE:/go/GoShop/internal/initialize/run.go:18\nmain.main\n\tE:/go/GoShop/cmd/server/main.go:6\nruntime.main\n\tC:/Program Files/Go/src/runtime/proc.go:271"}
+{"level":"INFO","time":"2024-11-08T06:05:17.341+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-11-08T06:05:17.344+0700","caller":"initialize/mysql.go:30","msg":"initialize MySQL successfully"}
+{"level":"ERROR","time":"2024-11-08T06:05:17.548+0700","caller":"initialize/redis.go:26","msg":"initialize Redis error: %v","error":"dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.","stacktrace":"github.com/VanThen60hz/GoShop/internal/initialize.InitRedis\n\tE:/go/GoShop/internal/initialize/redis.go:26\ngithub.com/VanThen60hz/GoShop/internal/initialize.Run\n\tE:/go/GoShop/internal/initialize/run.go:18\nmain.main\n\tE:/go/GoShop/cmd/server/main.go:6\nruntime.main\n\tC:/Program Files/Go/src/runtime/proc.go:271"}
+{"level":"INFO","time":"2024-11-08T06:06:17.429+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-11-08T06:06:17.433+0700","caller":"initialize/mysql.go:30","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-11-08T06:06:17.533+0700","caller":"initialize/redis.go:47","msg":"value of score is: ","score":"100"}
+{"level":"INFO","time":"2024-11-08T06:06:33.783+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-11-08T06:06:33.786+0700","caller":"initialize/mysql.go:30","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-11-08T06:06:33.885+0700","caller":"initialize/redis.go:47","msg":"value of score is: ","score":"100"}
+{"level":"INFO","time":"2024-11-08T06:07:30.260+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-11-08T06:07:30.264+0700","caller":"initialize/mysql.go:30","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-11-08T06:07:30.380+0700","caller":"initialize/redis.go:47","msg":"value of score is: ","score":"100"}
+{"level":"INFO","time":"2024-11-08T06:08:59.059+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-11-08T06:08:59.063+0700","caller":"initialize/mysql.go:30","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-11-08T06:08:59.167+0700","caller":"initialize/redis.go:47","msg":"value of score is: ","score":"100"}
+{"level":"INFO","time":"2024-11-08T06:13:19.970+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-11-08T06:13:19.978+0700","caller":"initialize/mysql.go:31","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-11-08T06:13:20.252+0700","caller":"initialize/redis.go:47","msg":"value of score is: ","score":"100"}
+{"level":"INFO","time":"2024-11-08T06:20:12.318+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"ERROR","time":"2024-11-08T06:20:12.330+0700","caller":"initialize/mysql.go:18","msg":"InitMysql initialize error","error":"Error 1049 (42000): Unknown database 'GoShop'","stacktrace":"github.com/VanThen60hz/GoShop/internal/initialize.checkErrorPanic\n\tE:/go/GoShop/internal/initialize/mysql.go:18\ngithub.com/VanThen60hz/GoShop/internal/initialize.InitMysql\n\tE:/go/GoShop/internal/initialize/mysql.go:30\ngithub.com/VanThen60hz/GoShop/internal/initialize.Run\n\tE:/go/GoShop/internal/initialize/run.go:17\nmain.main\n\tE:/go/GoShop/cmd/server/main.go:6\nruntime.main\n\tC:/Program Files/Go/src/runtime/proc.go:271"}
+{"level":"INFO","time":"2024-11-08T06:21:56.481+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-11-08T06:21:56.487+0700","caller":"initialize/mysql.go:31","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-11-08T06:23:24.747+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-11-08T06:23:24.754+0700","caller":"initialize/mysql.go:31","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-11-08T06:23:25.053+0700","caller":"initialize/redis.go:47","msg":"value of score is: ","score":"100"}
+{"level":"INFO","time":"2024-11-08T06:41:12.024+0700","caller":"initialize/run.go:16","msg":"Config log ok!","ok":"success"}
+{"level":"INFO","time":"2024-11-08T06:41:12.027+0700","caller":"initialize/mysql.go:30","msg":"initialize MySQL successfully"}
+{"level":"INFO","time":"2024-11-08T06:41:12.145+0700","caller":"initialize/redis.go:47","msg":"value of score is: ","score":"100"}
