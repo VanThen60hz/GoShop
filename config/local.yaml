@@ -3,11 +3,11 @@ server:
     mode: "dev"
 
 mysql:
-    host: 127.0.0.1
-    port: 3306
+    host: mysql_container #127.0.0.1
+    port: 3306 #33306
     username: root
-    password: 123456
-    dbName: GoShop
+    password: root1234
+    dbName: goshop
     maxIdleConns: 10
     maxOpenConns: 100
     connMaxLifetime: 3600 # in seconds
@@ -20,7 +20,7 @@ logger:
     max_age: 28 # in days
     compress: true
 redis:
-    host: 127.0.0.1
-    port: 6379
+    host: redis_container #127.0.0.1
+    port: 6379 #6381
     password:
     database: 0

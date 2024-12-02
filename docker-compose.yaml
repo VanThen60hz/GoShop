@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+    mysql:
+        image: mysql:8.0
+        container_name: mysql_container
+        environment:
+            MYSQL_ROOT_PASSWORD: root1234
+            MYSQL_USER: goshop_user
+            MYSQL_PASSWORD: 123456
+        ports:
+            - "33306:3306"
+        volumes:
+            - mysql_data:/var/lib/mysql
+            - ./init:/docker-entrypoint-initdb.d
+
+    redis:
+        image: redis:7.0
+        container_name: redis_container
+        ports:
+            - "6381:6379"
+        volumes:
+            - redis_data:/data
+
+    crm.goshop.com:
+        container_name: go_backend_crm_goshop
+        build:
+            context: .
+            dockerfile: Dockerfile
+        restart: always
+        depends_on:
+            - mysql
+            - redis
+        ports:
+            - "8008:8888"
+volumes:
+    mysql_data:
+    redis_data:
