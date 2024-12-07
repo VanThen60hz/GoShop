@@ -1,5 +1,10 @@
 package repo
 
+import (
+	"github.com/VanThen60hz/GoShop/global"
+	"github.com/VanThen60hz/GoShop/internal/model"
+)
+
 // type UserRepo struct{}
 
 // func NewUserRepo() *UserRepo {
@@ -23,5 +28,7 @@ func NewUserRepo() IUserRepo {
 
 // GetUserByEmail implements IUserRepo.
 func (u *userRepo) GetUserByEmail(email string) bool {
-	return true
+	// SELECT * FROM user WHERE email = email = '??' ORDER BY email
+	row := global.Mdb.Table(TableNameGoCrmUser).Where("user_email = ?", email).First(model.GoCrmUser{}).RowsAffected
+	return row != NumberNull
 }

@@ -15,6 +15,12 @@ type Config struct {
 		Password string `mapstructure:"password"`
 		Host     string `mapstructure:"host"`
 	} `mapstructure:"database"`
+	SMTP struct {
+		Host     string `mapstructure:"host"`
+		Port     string `mapstructure:"port"`
+		Username string `mapstructure:"username"`
+		Password string `mapstructure:"password"`
+	} `mapstructure:"smtp"`
 }
 
 func main() {

@@ -1,7 +1,10 @@
 package controller
 
 import (
+	"fmt"
+
 	"github.com/VanThen60hz/GoShop/internal/service"
+	"github.com/VanThen60hz/GoShop/internal/vo"
 	"github.com/VanThen60hz/GoShop/pkg/response"
 	"github.com/gin-gonic/gin"
 )
@@ -19,7 +22,13 @@ func NewUserController(
 }
 
 func (uc *UserController) Register(c *gin.Context) {
-	res := uc.userService.Register("", "")
+	var params vo.UserRegistrationRequest
+	if err := c.ShouldBindJSON(&params); err != nil {
+		response.ErrResponse(c, response.ErrCodeParamInvalid, err.Error())
+		return
+	}
+	fmt.Println("Email Params: ", params.Email)
+	res := uc.userService.Register(params.Email, params.Purpose)
 	response.SuccessResponse(c, res, nil)
 }
 

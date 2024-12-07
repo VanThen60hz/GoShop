@@ -3,10 +3,11 @@ server:
     mode: "dev"
 
 mysql:
-    host: mysql_container #127.0.0.1
+    # host: mysql_container #127.0.0.1
+    host: 127.0.0.1
     port: 3306 #33306
     username: root
-    password: root1234
+    password: 123456
     dbName: goshop
     maxIdleConns: 10
     maxOpenConns: 100
@@ -20,7 +21,14 @@ logger:
     max_age: 28 # in days
     compress: true
 redis:
-    host: redis_container #127.0.0.1
+    # host: redis_container #127.0.0.1
+    host: 127.0.0.1
     port: 6379 #6381
     password:
     database: 0
+
+smtp:
+    host: "email-smtp.ap-southeast-2.amazonaws.com"
+    port: "587"
+    username: "AKIAYSE4OBOZLCCMUDIU"
+    password: "BILPzCmfZbDuw7P9G6Q9QC5ylFcOaiQGFWlj4IPhMVkS"
