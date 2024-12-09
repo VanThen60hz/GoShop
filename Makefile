@@ -1,3 +1,7 @@
+GOOSE_DBSTRING= "root:123456@tcp(127.0.0.1:3306)/goshop"
+GOOSE_MIGRATION_DIR ?= sql/schema
+
+
 # Name APP
 APP_NAME := server
 
@@ -17,6 +21,16 @@ up:
 down:
 	docker compose down
 
-.PHONY: run
+upse:
+	@GOOSE_DRIVER=mysql GOOSE_DBSTRING=${GOOSE_DBSTRING} goose -dir=${GOOSE_MIGRATION_DIR} up
+
+downse:
+	@GOOSE_DRIVER=mysql GOOSE_DBSTRING=${GOOSE_DBSTRING} goose -dir=${GOOSE_MIGRATION_DIR} down
+
+resetse:
+	@GOOSE_DRIVER=mysql GOOSE_DBSTRING=${GOOSE_DBSTRING} goose -dir=${GOOSE_MIGRATION_DIR} reset
+
+
+.PHONY: run downse upse resetse
 
 .PHONY: air

@@ -1,3 +1,17 @@
 {
-    "cSpell.words": ["Authen", "gorm", "goshop", "mapstructure", "Syncer", "varchar", "wireinject"]
+    "cSpell.words": [
+        "Authen",
+        "DBSTRING",
+        "downse",
+        "gorm",
+        "goshop",
+        "mapstructure",
+        "Mdbc",
+        "resetse",
+        "SQLC",
+        "Syncer",
+        "upse",
+        "varchar",
+        "wireinject"
+    ]
 }

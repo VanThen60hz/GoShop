@@ -2,7 +2,7 @@ package repo
 
 import (
 	"github.com/VanThen60hz/GoShop/global"
-	"github.com/VanThen60hz/GoShop/internal/model"
+	"github.com/VanThen60hz/GoShop/internal/database"
 )
 
 // type UserRepo struct{}
@@ -20,15 +20,24 @@ type IUserRepo interface {
 	GetUserByEmail(email string) bool
 }
 
-type userRepo struct{}
+type userRepo struct {
+	sqlc *database.Queries
+}
 
 func NewUserRepo() IUserRepo {
-	return &userRepo{}
+	return &userRepo{
+		sqlc: database.New(global.Mdbc),
+	}
 }
 
 // GetUserByEmail implements IUserRepo.
-func (u *userRepo) GetUserByEmail(email string) bool {
+func (ur *userRepo) GetUserByEmail(email string) bool {
 	// SELECT * FROM user WHERE email = email = '??' ORDER BY email
-	row := global.Mdb.Table(TableNameGoCrmUser).Where("user_email = ?", email).First(model.GoCrmUser{}).RowsAffected
-	return row != NumberNull
+	// row := global.Mdb.Table(TableNameGoCrmUser).Where("user_email = ?", email).First(model.GoCrmUser{}).RowsAffected
+	user, err := ur.sqlc.GetUserByEmailSQLC(ctx, email)
+	if err != nil {
+		return false
+	}
+
+	return user.UsrID != 0
 }
